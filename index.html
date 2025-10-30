@@ -1,2 +1,41 @@
-<h1>Test Page For site, more will go here in a tick</h1>
-<p>Other things</p>
+# Simple Clicker Game
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Clicker Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #score {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="score">Score: 0</div>
+    <button id="clickButton">Click Me!</button>
+
+    <script>
+        let score = 0;
+        const scoreDisplay = document.getElementById('score');
+        const clickButton = document.getElementById('clickButton');
+
+        clickButton.addEventListener('click', () => {
+            score++;
+            scoreDisplay.textContent = 'Score: ' + score;
+        });
+    </script>
+</body>
+</html>
